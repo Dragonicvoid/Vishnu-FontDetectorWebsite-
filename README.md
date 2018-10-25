@@ -13,3 +13,11 @@ patch 002 note :
 1. we already implement the javascript for face detection using default images, if you open the console on your browser
    you could see some data are accepted and decline, we can take the first data (the most likely font) and show it on our website.
 2. if you want to try the website download it and run laravel but don't open it on Microsoft Edge.
+
+patch 003 note :
+1. we finally added a feature to upload an image.
+2. uploaded image will be sent to the database (public/images/), and the name of each file will be on the database, we still name it same for each users (will be updated).
+3. to input a image you have to change the directory to localhost/home/{your name}
+4. to show the uploaded image click your name on the coner right or change the domain to localhost/table/{your name}
+5. as you can see, we don't have login page, so login still manual.
+6. if you try to upload the file without login it will break the program.
