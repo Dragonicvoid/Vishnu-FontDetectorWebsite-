@@ -21,3 +21,8 @@ patch 003 note :
 4. to show the uploaded image click your name on the coner right or change the domain to localhost/table/{your name}
 5. as you can see, we don't have login page, so login still manual.
 6. if you try to upload the file without login it will break the program.
+
+patch 004 note :
+1. we finally able to detects what is the font of the uploaded picture.
+2. there are still some bugs, like when you are in session of login, when the other user is also log on your session is also changed.
+3. this is probably the last patch since its almost at the end of the semester.
