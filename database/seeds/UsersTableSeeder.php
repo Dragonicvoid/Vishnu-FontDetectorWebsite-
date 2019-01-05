@@ -14,7 +14,7 @@ class UsersTableSeeder extends Seeder
         \App\User::insert([
             'id_user' => 1,
             'username' => 'Bambang',
-            'password' => 'password',
+            'password' => \Illuminate\Support\Facades\Hash::make('password'),
             'email' => 'Bambang@yahoo.co.id',
             'phone' => '082112483391',
             'gender' => 'male',
@@ -26,7 +26,7 @@ class UsersTableSeeder extends Seeder
         \App\User::insert([
             'id_user' => 2,
             'username' => 'Susi',
-            'password' => 'password',
+            'password' => \Illuminate\Support\Facades\Hash::make('password'),
             'email' => 'Susy@yahoo.co.id',
             'phone' => '082112483391',
             'gender' => 'female',
@@ -38,7 +38,7 @@ class UsersTableSeeder extends Seeder
         \App\User::insert([
             'id_user' => 3,
             'username' => 'Tery',
-            'password' => 'password',
+            'password' => \Illuminate\Support\Facades\Hash::make('password'),
             'email' => 'Tery@yahoo.co.id',
             'phone' => '082112483391',
             'gender' => 'male',

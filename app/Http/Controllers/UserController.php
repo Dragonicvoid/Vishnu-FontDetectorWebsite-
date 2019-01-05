@@ -7,6 +7,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 use Symfony\Component\Debug\Debug;
@@ -30,7 +31,7 @@ class UserController extends Controller
         $user = User::where('email', $req->email)->first();
 
         if($user){
-            if($user->password == $req->password){
+            if(Hash::check($req->password, $user->password)){
                 Cache::put('id', $user->id_user, 120);
                 Cache::put('isLogin', TRUE, 120);
                 return redirect('/home');
@@ -142,7 +143,7 @@ class UserController extends Controller
         if($validator->fails()) {
             return redirect()->back()->withErrors($validator);
         }
-
+        $hashed = Hash::make($req->password);
         $count = DB::select("SHOW TABLE STATUS LIKE 'user'");
         $nextId = $count[0]->Auto_increment;
         $image = $req->name .'-' .$nextId .'.jpg';
@@ -150,7 +151,7 @@ class UserController extends Controller
         User::insert(
             [
                 'username' => $req->name,
-                'password' => $req->password,
+                'password' => $hashed,
                 'email' => $req->email,
                 'phone' => $req->phone,
                 'gender' => $req->gender,
