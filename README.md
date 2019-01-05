@@ -26,3 +26,5 @@ patch 004 note :
 1. we finally able to detects what is the font of the uploaded picture.
 2. there are still some bugs, like when you are in session of login, when the other user is also log on your session is also changed.
 3. this is probably the last patch since its almost at the end of the semester.
+4. can login, register, upload and scan photos, see the user's upload history(if you choose to save it).
+5. website can be open on vishnufontdetector.com
