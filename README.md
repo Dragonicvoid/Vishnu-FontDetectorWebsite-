@@ -7,7 +7,6 @@ patch 001 note :
  - https://www.w3schools.com/jsref/dom_obj_fileupload.asp
 2. for the font detection we willbe using Vasile Peste 's Typefont that uses java script and JSON :
  - https://github.com/Vasile-Peste/Typefont
-3. to see the project, just change the branch to the recent branches one
 
 patch 002 note : 
 1. we already implement the javascript for face detection using default images, if you open the console on your browser
